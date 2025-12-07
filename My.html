@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>مستقل للخدمات الالكترونية</title>
+  <style>
+    * {box-sizing: border-box;}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+    }
+    header {
+      background: linear-gradient(to left, #2b5876, #4e4376);
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #2b5876;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+    .service, .project {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+    .service:hover, .project:hover {
+      background: #f1faff;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+font-size: 16px;
+    }
+    form button {
+      background: #2b5876;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: #1e3c56;
+    }
+    footer {
+      text-align: center;
+      background: #4e4376;
+      color: white;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>مستقل للخدمات الالكترونية</h1>
+    <nav>
+      <a href="#about">عنّي</a>
+      <a href="#services">الخدمات</a>
+      <a href="#projects">أعمالي</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>عنّي</h2>
+    <p>أنا مستقل أقدم خدمات التصميم، البرمجة، وكتابة المحتوى بخبرة وجودة عالية.</p>
+  </section>
+
+  <section id="services">
+    <h2>الخدمات</h2>
+    <div class="service">✏️ كتابة المحتوى الاحترافي للمواقع والمدونات</div>
+    <div class="service">🎨 تصميم شعارات وهوية بصرية</div>
+    <div class="service">💻 تصميم صفحات ويب بـ HTML وCSS</div>
+    <div class="service"> ثتبيت ويندوز
+  </section>
+
+  <section id="projects">
+    <h2>معرض الأعمال</h2>
+    <div class="project">✔️ شعار لمتجر إلكتروني عصري</div>
+    <div class="project">✔️ صفحة هبوط لحملة إعلانية</div>
+  </section>
+
+  <section id="contact">
+<h2>تواصل معي</h2>
+    <form onsubmit="sendMessage(); return false;">
+      <input type="text" id="name" placeholder="اسمك" required>
+      <input type="text" id="service" placeholder="الخدمة المطلوبة" required>
+      <textarea id="msg" rows="5" placeholder="رسالتك..." required></textarea>
+      <button type="submit">إرسال عبر واتساب</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 جميع الحقوق محفوظة
+  </footer>
+
+  <script>
+    function sendMessage() {
+      var name = document.getElementById("name").value;
+      var service = document.getElementById("service").value;
+      var msg = document.getElementById("msg").value;
+      var full = `مرحبًا، اسمي name{service}%0Aالرسالة: msg`;
+      window.open(`https://wa.me/whatsapp_number?text={full}`, "_blank");
+    }
+  </script>
+
+</body>
+</html>
